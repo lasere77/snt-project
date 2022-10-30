@@ -1,0 +1,152 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+}
+html, body{
+	background: url("https://clubkendoupc.com/wp-content/uploads/2017/01/search-background-img.jpg?w=640") no-repeat;
+    height: 100%;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*
+*txt
+*/
+.text{
+    color: white;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+.txt{
+    display: flex;
+    justify-content: center;
+}
+
+/*
+*main
+*/
+#main-java{
+    margin-top: 20%;
+}
+#main-cpp{
+    margin-top: 16%;
+}
+#main-asm{
+    margin-top: 5%;
+}
+
+
+/*
+*btn
+*/
+.menu{
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buttons {
+    display: flex;
+}
+.btns{
+    text-decoration: none;
+    padding: 20px 50px;
+    overflow: hidden;
+    color: white;
+    border-radius: 30px;
+    box-shadow: 0 0 0 0 rgba(143, 64, 248, 0.5), 0 0 0 0 rgba(39, 200, 255, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 50px;
+}
+.btns::after{
+    content: "";
+    width:  400px;
+    height: 400px;
+    position: absolute;
+    top: -50px;
+    left: -100px;
+    background-color: #4f5496;
+    background-image: linear-gradient(225deg, #4f5496 0%, #5359a5 50%, #bf3e5d 100%);
+    z-index: -1;
+    transition: transform 0.5 ease;
+}
+.btns:hover{
+    transform: translate(0, -6px);
+    box-shadow: 10px -10px 25px 0 rgba(145, 90, 216, 0.5), -10px 10px 25px 0 rgba(39, 248, 255, 0.5);
+}
+.btns:hover::after{
+    transform: rotate(150deg);
+}
+
+
+/*
+*img (java, cpp, asm/python)
+*/
+div#code-asm {
+    display: flex;
+    justify-content: center;
+}
+div#code-asm img#asm{
+    height:40%; 
+    width:20%;
+    margin-right: 2%;
+}
+div#code-asm img#python{
+    height:40%; 
+    width:20%;
+}
+
+div#code-cpp {
+    display: flex;
+    justify-content: center;
+}
+div#code-cpp img#cpp{
+    height:40%; 
+    width:20%;
+    margin-right: 2%;
+}
+
+div#code-java {
+    display: flex;
+    justify-content: center;
+}
+div#code-java img#java{
+    height:40%; 
+    width:20%;
+    margin-right: 2%;
+}
+
+
+/*
+effet de click 
+*/
+.clickAnim{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(to top, #bf3e5d, #4f5496);
+    position: absolute;
+    z-index: 9000;
+    transform: scale(0);
+    transform-origin: center;
+    animation: clickAnim 1s ease-in-out;
+}
+
+@keyframes clickAnim {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(2);
+        opacity: 1;
+    }
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
