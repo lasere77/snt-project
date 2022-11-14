@@ -9,6 +9,9 @@ html, body{
     height: 100%;
     font-weight: 400;
     font-family: 'Poppins', sans-serif;
+    /*scrollbar effect for firefox*/ 
+    overflow-y: scroll;
+    scrollbar-color: #bf3e5d #4f5496;
 }
 
 /*
@@ -121,9 +124,41 @@ div#code-java img#java{
     margin-right: 2%;
 }
 
+/*
+*text img (java, cpp, asm)
+*/
+.txt-img-java-cpp{
+    display: flex;
+    justify-content: center;
+}
+.txt-img-asm{
+    display: flex;
+}
+.txt-img-asm #asm{
+    margin-left: 37%;
+}
+.txt-img-asm #python{
+    margin-left: 17%;
+}
 
 /*
-effet de click 
+*scrollbar effect 
+*/
+::-webkit-scrollbar {
+    width: 20px;
+    background: #bf3e5d;
+}
+::-webkit-scrollbar-track {
+    background: #bf3e5d;
+    border-radius: 100vw;
+}
+::-webkit-scrollbar-thumb {
+    background: #4f5496;
+    border-radius: 100vw;
+}
+
+/*
+*effet de click 
 */
 .clickAnim{
     width: 50px;

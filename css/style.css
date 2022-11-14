@@ -9,6 +9,9 @@ html, body{
     height: 100%;
     font-weight: 400;
     font-family: 'Poppins', sans-serif;
+    /*scrollbar effect for firefox*/ 
+    overflow-y: scroll;
+    scrollbar-color: #bf3e5d #4f5496;
 }
 /*
 *txt
@@ -91,14 +94,14 @@ html, body{
     width:2.5%;
 }
 #github{
-    margin-left: 5%;/*46.3%*/
+    margin-left: 5%;
 }
 #my-github{
     margin-left: 42.3%;
 }
 
 /*
-effet de click 
+*effet de click 
 */
 .clickAnim{
     width: 50px;
@@ -110,6 +113,22 @@ effet de click
     transform: scale(0);
     transform-origin: center;
     animation: clickAnim 1s ease-in-out;
+}
+
+/*
+*scrollbar effect 
+*/
+::-webkit-scrollbar {
+    width: 20px;
+    background: #bf3e5d;
+}
+::-webkit-scrollbar-track {
+    background: #bf3e5d;
+    border-radius: 100vw;
+}
+::-webkit-scrollbar-thumb {
+    background: #4f5496;
+    border-radius: 100vw;
 }
 
 @keyframes clickAnim {
